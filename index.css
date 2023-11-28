@@ -2,16 +2,25 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
+    background-color: bisque;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Make the background fixed for the parallax effect */
 }
 
 .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: rgba(252, 9, 9, 0.753); /* Add a semi-transparent background for better readability */
     position: fixed;
-    width: 50px; /* Set the initial width for the sidebar on PC and mobile */
+    width: 10%;
+    max-width: 70px;
+    min-width: 50px; /* Set the initial width for the sidebar on PC */
     height: 100%;
     transition: 0.5s;
     z-index: 1;
+    border-radius: 0 50px 50px 0;
+    padding-top: 20px;
+
 }
 
 .navbar img {
@@ -21,10 +30,9 @@ body {
 
 .navbar a {
     float: left;
-    display: block;
+    display: flex;
+    align-items: center;
     color: #f2f2f2;
-    text-align: center;
-    padding: 14px 0;
     text-decoration: none;
     width: 100%; /* Make the links take up the full width of the sidebar */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
@@ -32,41 +40,47 @@ body {
 
 .navbar a span {
     display: none; /* Initially hide the span (full name) */
+    padding-left: 20px; /* Add some spacing */
+    padding: 10px;
+    border: 2px solid;
 }
 
 .main-content {
-    margin-left: 50px; /* Set the initial margin for the main content on PC and mobile */
+    margin-left: 65px; /* Set the initial margin for the main content on PC */
     padding: 16px;
     transition: margin-left 0.5s;
-}
+    color: #fff; /* Set text color for better readability */
 
-.navbar-toggle-btn {
-    display: none; /* Hide the button on PC and mobile */
 }
 
 @media screen and (max-width: 600px) {
     .navbar a span {
-        display: inline-block; /* Display the span (full name) on mobile */
-        padding-left: 10px; /* Add some spacing */
+        display: inline-block; /* Display the span (full name) on mobile and PC */
     }
 
-    .navbar img {
-        display: none; /* Hide the logos on mobile when expanded */
+    .navbar.expanded {
+        width: 230px; /* Set the expanded width for the sidebar on mobile */
+        max-width: 150px;
+
     }
 
-    .navbar:hover {
-        width: 200px; /* Set the expanded width for the sidebar on mobile */
+    .main-content {
+        margin-left: 60px; /* Set the margin for the main content on mobile */
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .navbar a span {
+        display: inline-block; /* Display the span (full name) on hover for PC */
     }
 
-    .navbar-toggle-btn {
-        display: block; /* Display the button on mobile */
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        background-color: #333;
-        color: #f2f2f2;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
+    .navbar:hover, .navbar.expanded {
+        width: 200px; /* Set the expanded width for the sidebar on PC */
+        max-width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px; /* Set the margin for the main content on PC */
+        
     }
 }
