@@ -37,5 +37,5 @@ var navbar = document.querySelector('.navbar');
     // Parallax effect on body
     document.addEventListener('scroll', function() {
         var scrolled = window.scrollY;
-        document.body.style.backgroundPositionY = -(scrolled * 0.3) + 'px'; /* Adjust the multiplier for the parallax effect */
+        document.body.style.backgroundPositionY = -(scrolled * 0.3) + 'px';
     });

@@ -15,18 +15,22 @@ body {
     position: fixed;
     width: 10%;
     max-width: 70px;
-    min-width: 50px; /* Set the initial width for the sidebar on PC */
-    height: 100%;
+    min-width: 60px; /* Set the initial width for the sidebar on PC */
+    height: 96.5%;
+    vertical-align: middle;
     transition: 0.5s;
     z-index: 1;
-    border-radius: 0 50px 50px 0;
-    padding-top: 20px;
-
+    border-radius: 0px 50px 50px 0;
+    padding-top: 40px;
+    align-items: left;
 }
 
 .navbar img {
     display: block;
     margin: 10px auto; /* Adjust as needed */
+    padding-top: 25px;
+    padding-bottom: 5px;
+    height: 25px;
 }
 
 .navbar a {
@@ -37,16 +41,18 @@ body {
     text-decoration: none;
     width: 100%; /* Make the links take up the full width of the sidebar */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    vertical-align: middle;
+    text-align: left;
 }
 
 .navbar a span {
     display: none; /* Initially hide the span (full name) */
-    padding-left: 20px; /* Add some spacing */
-    padding: 10px;
+    padding-left: 0px; /* Add some spacing */
+    padding: 5px;
 }
 
 .main-content {
-    margin-left: 65px; /* Set the initial margin for the main content on PC */
+    margin-left: 70px; /* Set the initial margin for the main content on PC */
     padding: 16px;
     transition: margin-left 0.5s;
     color: #fff; /* Set text color for better readability */
@@ -64,22 +70,22 @@ body {
     }
 
     .main-content {
-        margin-left: 60px; /* Set the margin for the main content on mobile */
+        margin-left: 60px; 
     }
 }
 
 @media screen and (min-width: 601px) {
     .navbar a span {
-        display: inline-block; /* Display the span (full name) on hover for PC */
+        display: inline-block; 
     }
 
     .navbar:hover, .navbar.expanded {
-        width: 200px; /* Set the expanded width for the sidebar on PC */
+        width: 200px; 
         max-width: 200px;
     }
 
     .main-content {
-        margin-left: 200px; /* Set the margin for the main content on PC */
+        margin-left: 200px;
         
     }
 }
