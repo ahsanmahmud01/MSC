@@ -2,16 +2,17 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
-    background-color: #04151F;
+    background-color: #070E13;
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Make the background fixed for the parallax effect */
     margin-top: 0;
+
 }
 
 .navbar {
     overflow: hidden;
-    background-color: #0b3142a9 ; /* Add a semi-transparent background for better readability */
+    background-color: #0a508385;
     position: fixed;
     width: 10%;
     max-width: 70px;
@@ -23,18 +24,23 @@ body {
     border-radius: 0px 50px 50px 0;
     padding-top: 40px;
     align-items: left;
-    
+
 }
 
 .navbar img {
     display: block;
-    margin: 10px auto; /* Adjust as needed */
-    padding-top: 25px;
-    padding-bottom: 5px;
-    height: 25px;
+    margin-left: 0;
+    width: 60px;
+    padding-right: 5px;
+    padding-left: 4px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar a {
+    padding-top: 20px;
+    padding-bottom: 20px;
     float: left;
     display: flex;
     align-items: center;
@@ -44,19 +50,24 @@ body {
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     vertical-align: middle;
     text-align: left;
+    position: relative;
+    align-items: center;
 }
 
 .navbar a span {
-    display: none; /* Initially hide the span (full name) */
+    position: relative ;
+    align-items: center;
+    vertical-align: middle;
     padding-left: 0px; /* Add some spacing */
-    padding: 5px;
+    padding: 0;
 }
 
 .main-content {
-    margin-left: 70px; /* Set the initial margin for the main content on PC */
-    padding: 16px;
+    margin-left: 60px; /* Set the initial margin for the main content on PC */
     transition: margin-left 0.5s;
     color: #fff; /* Set text color for better readability */
+    padding-top: 15px;
+    padding-left: 5px;
 
 }
 
@@ -71,7 +82,7 @@ body {
     }
 
     .main-content {
-        margin-left: 60px; 
+        margin-left: 70px;
     }
     
 }
@@ -92,7 +103,7 @@ body {
     }
 }
 .title{
-    padding: 0;
+    padding: 5px;
     width: 100%;
     text-align: center;
     margin: 10px;
@@ -111,4 +122,19 @@ body {
     padding-top: 0;
     border-top: 0;
     
+}
+.it-club{
+    width: 90%;
+    background-color: #242F40;
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 5px;
+    text-align: center;
+
+}
+.itc-title{
+    color: #FFFFFC;
+    position: relative;
+    justify-content: center;
+    text-align: center;
 }
