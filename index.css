@@ -1,5 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Dhurjati&display=swap');
-@media only screen and (max-width: 600px) {
+:root{
+    font-size: 16px;
+    --text-primary: #DCEBE5;
+    --text-secoundary: #14417c;
+    --bg-primary: #ddc6c6;
+    --bg-secondary: #ffffffc7;
+}
+body{
+    margin: 0;
+    background-color: #000000;
+    padding: 0;
+}
+main{
+    margin-left: 5rem;
+    color: var(--text-primary);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+body::-webkit-scrollbar {
+    width: .3rem;
+}
+body::-webkit-scrollbar-track
+{
+    background: #fcfeff;
+}
+body::-webkit-scrollbar-thumb{
+background: #b4c3d4;
+width: .1rem;
+}
+.navbar{
+    position: fixed;
+    background-color: var(--bg-secondary);
+    border-radius: .5rem;
+    margin: .2rem;
+    transition: 300ms ease;
+}
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-item{
+    width: 100%;
+}
+.nav-link{
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(.9);
+    transition: var(--transition-speed);
+    padding: .1rem;
+    border: .1rem;
+}
+
+.link-text{
+    display: none;
+    margin-left: 1rem;
+    text-align: center;
+}
+.nav-link img{
+    width: 2rem;
+    margin: 0 1.5rem;
+}
+.nav-link:hover{
+    filter: grayscale(0%) opacity(1);
+    transition: 300ms;
+    background-color: #778DA9;
+    border-radius: .5rem;
+    padding: .1rem;
+    border: .1rem;
+}
+@media only screen and (min-width: 0px) {
     .navbar{
         bottom: 0;
         width: 98.7%;
@@ -23,72 +99,7 @@
         display: none;
     }
 }
-@media only screen and (min-width: 601px) {
-    .navbar{
-        top: 0;
-        width: 5rem;
-        height: 98.5vh;
-        transition: 200ms;
-    }
-    .navbar:hover{
-        width: 15rem;
-    }
-    .navbar:hover .link-text{
-        display: inline-block;
-        transition-delay: 100ms;
-        font-family: 'Boogaloo', sans-serif;
-        font-family: 'Dhurjati', sans-serif;
-        font-size: 1.1rem;
-        font-family: bold;
-        text-align: center;
-    }
-    .nav-link:hover{
-        filter: grayscale(0%) opacity(1);
-        transition: 300ms;
-        background-color: #778DA9;
-        border-radius: .5rem;
-        padding: .1rem;
-        border: .1rem;
 
-    }
-    .msc-nav{
-        width: 100%;
-        margin-top: 43vh;
-        display: block;
-    }
-    .navbar:hover .msc-nav {
-        width: 7rem;
-        transition: 400ms;
-        transform:  rotate(180deg); 
-        align-items: center;
-        margin-left: 1rem;
-    }
-    .material-symbols-outlined{
-        width: 5rem;
-        margin-left: 2rem;
-    }
-    .logo{
-        width: 100%;
-    }
-    .navbar:hover .logo img{
-        margin-top: 1rem;
-        width: 30%;
-    }
-    .title-bar{
-        width: 98.5%;
-    }
-}
-.title-bar{
-    text-align: center;
-    background: fixed;
-    background-color: #691818;
-    border-radius: 8px;
-    height: 9vh;
-    justify-content: center;
-    padding: .5rem;
-    margin-top: .2rem;
-    margin-right: rem;
-}
 
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
@@ -188,10 +199,4 @@ p {
   h1 {
     font-size:24px;
   }
-}
-.MSC-title{
-  font-weight: bold;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-style: oblique;
-
 }
