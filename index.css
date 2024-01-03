@@ -4,7 +4,7 @@
     --text-primary: #DCEBE5;
     --text-secoundary: #14417c;
     --bg-primary: #ddc6c6;
-    --bg-secondary: #ffffffc7;
+    --bg-secondary: #000000d3;
 }
 body{
     margin: 0;
@@ -30,10 +30,12 @@ width: .1rem;
 }
 .navbar{
     position: fixed;
-    background-color: var(--bg-secondary);
+    background: linear-gradient(240deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
     border-radius: .5rem;
     margin: .2rem;
     transition: 300ms ease;
+    display: grid;    
+
 }
 .navbar-nav{
     list-style: none;
@@ -42,6 +44,8 @@ width: .1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    place-content: center;
+    place-self: center;
 }
 .nav-item{
     width: 100%;
