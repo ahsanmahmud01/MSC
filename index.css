@@ -30,7 +30,7 @@ width: .1rem;
 }
 .navbar{
     position: fixed;
-    background: linear-gradient(240deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+    background: linear-gradient(rgb(51, 48, 48) 0%, rgb(0, 0, 0) 100% , rgb(65, 61, 61) 0%);
     border-radius: .5rem;
     margin: .2rem;
     transition: 300ms ease;
@@ -204,4 +204,8 @@ p {
   h1 {
     font-size:24px;
   }
+}
+.main-body{
+  color: #000000;
+  
 }
