@@ -1,5 +1,5 @@
 :root {
-    --atom-size: 180px;
+    --atom-size: 20rem;
     --atom-color-hex: #00d8ff;
     --atom-color-rgb: 0, 216, 255;
     --nucleus-size: calc(var(--atom-size) / 5);
