@@ -1,5 +1,5 @@
 :root {
-    --atom-size: 20rem;
+    --atom-size: 70vw;
     --atom-color-hex: #00d8ff;
     --atom-color-rgb: 0, 216, 255;
     --nucleus-size: calc(var(--atom-size) / 5);
@@ -10,8 +10,12 @@
     --electron-speed-alpha : 1s;
     --electron-speed-omega : .8s;
 }
+ body{
+    background: #1f1f1f;
 
-html, body {
+ }
+
+ .atom-body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -19,10 +23,12 @@ html, body {
     overflow: hidden;
     background: #1f1f1f;
 }
-body {
+.atom-body {
     display: grid;
     place-items: center;
     box-sizing: border-box;
+    margin: auto;
+    height: auto;
 }
 *, *:before, *::after { box-sizing: border-box; }
 
@@ -217,8 +223,13 @@ footer {
     height: 4rem;
     display: grid;
     place-items: center;
+    color: aliceblue;
 }
-a {
+a:hover {
+    color: rgba(255, 255, 255, 1);
+    background: rgba(0, 0, 0, .5);
+}
+.Proof{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Droid Sans", "Helvetica Neue", Arial, sans-serif;;
     font-size: smaller;
     font-weight: lighter;
@@ -226,10 +237,11 @@ a {
     padding: .6rem .8rem;
     border-radius: .3rem;
     color: rgba(255, 255, 255, .25);
-    background: rgba(0, 0, 0, 0);
     transition: all .35s ease-in-out;
+    font-size: larger;
 }
-a:hover {
-    color: rgba(255, 255, 255, 1);
-    background: rgba(0, 0, 0, .5);
+
+.idk{
+    
+    color: #084141;
 }
