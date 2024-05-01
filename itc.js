@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer sk-proj-FSRO2NfU1wTP2Yav5n90T3BlbkFJjVh5Z14Oi9WiMZa9N7Yl' // Updated API key
+          'Authorization': 'Bearer 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' // Updated API key
         },
         body: JSON.stringify({
           model: 'text-davinci-003', // You can use different models here
