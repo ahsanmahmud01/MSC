@@ -3,51 +3,52 @@ document.addEventListener('DOMContentLoaded', function () {
     const userInput = document.getElementById('user-input');
 
     userInput.addEventListener('keydown', function (event) {
-      if (event.key === 'Enter') {
-        const userMessage = userInput.value.trim();
-        if (userMessage !== '') {
-          appendUserMessage(userMessage);
-          userInput.value = '';
-          sendToChatGPT(userMessage);
+        if (event.key === 'Enter') {
+            const userMessage = userInput.value.trim();
+            if (userMessage !== '') {
+                appendUserMessage(userMessage);
+                userInput.value = '';
+                respondToUser(userMessage);
+            }
         }
-      }
     });
 
     function appendUserMessage(message) {
-      const messageDiv = document.createElement('div');
-      messageDiv.className = 'user-message';
-      messageDiv.textContent = message;
-      chatContainer.appendChild(messageDiv);
-      chatContainer.scrollTop = chatContainer.scrollHeight;
-      setTimeout(() => {
-        messageDiv.style.display = 'none'; // Hide user message after a delay
-      }, 3000); // Delay for hiding user message (3 seconds)
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'user-message';
+        messageDiv.textContent = message;
+        chatContainer.appendChild(messageDiv);
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+        setTimeout(() => {
+            messageDiv.style.display = 'none'; // Hide user message after a delay
+        }, 3000); // Delay for hiding user message (3 seconds)
     }
 
     function appendBotMessage(message) {
-      const messageDiv = document.createElement('div');
-      messageDiv.className = 'bot-message';
-      messageDiv.textContent = message;
-      chatContainer.appendChild(messageDiv);
-      chatContainer.scrollTop = chatContainer.scrollHeight;
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'bot-message';
+        messageDiv.textContent = message;
+        chatContainer.appendChild(messageDiv);
+        chatContainer.scrollTop = chatContainer.scrollHeight;
     }
 
-    async function sendToChatGPT(message) {
-      const response = await fetch('https://api.openai.com/v1/completions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer sk-proj-UMgYb9FaDvmbYDLc5KWcT3BlbkFJgiORtQ9gIUlPdsOdBhi1' // Updated API key
-        },
-        body: JSON.stringify({
-          model: 'text-davinci-003', // You can use different models here
-          prompt: message,
-          max_tokens: 150 // Adjust max tokens as needed
-        })
-      });
-
-      const data = await response.json();
-      const botResponse = data.choices[0].text.trim();
-      appendBotMessage(botResponse);
+    function respondToUser(message) {
+        // Simple rule-based responses
+        let botResponse;
+        switch (message.toLowerCase()) {
+            case 'hello':
+                botResponse = "Hello! How can I assist you today?";
+                break;
+            case 'about':
+                botResponse = "Mirpur Science College is a leading institution in science education.";
+                break;
+            case 'contact':
+                botResponse = "You can contact us at contact@mirpursciencecollege.edu.bd.";
+                break;
+            default:
+                botResponse = "I'm sorry, I didn't understand that. Please ask something else.";
+                break;
+        }
+        appendBotMessage(botResponse);
     }
 });
