@@ -21,7 +21,9 @@ header, .animated-container, .chatbot-container, .section {
 h1, .main-body, .section-title {
   font-size: 36px;
 }
-
+.main-body{
+  width: 100%;
+}
 .animated-svg {
   width: 200px;
   height: 200px;
