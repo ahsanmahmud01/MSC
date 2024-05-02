@@ -22,7 +22,7 @@ body {
 }
 
 .inner-header {
-    height: 65vh;
+    height: 55vh;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -99,6 +99,7 @@ body {
     background: linear-gradient(rgb(51, 48, 48) 0%, rgb(0, 0, 0) 100%, rgb(65, 61, 61) 0%);
     border-radius: .5rem;
     margin: .2rem;
+    margin-bottom: 20px;
     transition: 300ms ease;
     display: grid;
 }
@@ -318,4 +319,7 @@ body {
     .logo {
         display: none;
     }
+}
+.container{
+    width: 100%;
 }
