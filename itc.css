@@ -1,99 +1,164 @@
 /* Global styles */
 body {
-    background-color: #011C2D;
-    color: #FFFFFF;
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
+  background-color: #011C2D;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 header, .animated-container, .chatbot-container, .section {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 h1, .main-body, .section-title {
-    font-size: 36px;
+  font-size: 36px;
 }
 
 .animated-svg {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
 }
 
 /* Chatbot container styles */
 /* Updated CSS for chatbot container and messages */
 .chatbot-container {
-    max-width: 400px;
-    margin: 0 auto;
-    border: 1px solid #00BFFF;
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-    margin-top: 50px;
-    padding: 20px;
-    overflow-y: auto; /* Added overflow-y to enable scrolling */
-  }
-  
-  .main-body {
-    text-align: center;
-    color: #00BFFF;
-    margin-bottom: 20px;
-  }
-  
-  .user-input {
-    width: calc(100% - 20px);
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #00BFFF;
-    color: #fff;
-    background-color: #333;
-  }
-  
-  .user-input:focus {
-    outline: none;
-    border-color: #00FFFF;
-  }
-  
-  .user-message, .bot-message {
-    max-width: 80%;
-    margin-bottom: 8px;
-    padding: 8px 12px;
-    border-radius: 5px;
-  }
-  
-  .bot-message {
-    background-color: #00BFFF;
-    color: #fff;
-  }
-  
-  /* Hide toggle buttons */
-  button {
-    display: none;
-  }
+  max-width: 400px;
+  margin: 0 auto;
+  border: 1px solid #00BFFF;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-top: 50px;
+  padding: 20px;
+  overflow-y: auto; /* Added overflow-y to enable scrolling */
+}
+
+.main-body {
+  text-align: center;
+  color: #00BFFF;
+  margin-bottom: 20px;
+}
+
+.user-input {
+  width: calc(100% - 20px);
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #00BFFF;
+  color: #fff;
+  background-color: #333;
+}
+
+.user-input:focus {
+  outline: none;
+  border-color: #00FFFF;
+}
+
+.user-message, .bot-message {
+  max-width: 80%;
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.bot-message {
+  background-color: #00BFFF;
+  color: #fff;
+}
+
+/* Hide toggle buttons */
+button {
+  display: none;
+}
 
 
 /* Team member styles */
 .team-member {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .team-member img {
-    max-width: 100%;
-    border-radius: 50%;
-    margin-bottom: 10px;
+  max-width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 /* Footer styles */
 footer {
-    background-color: #011C2D;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 20px 0;
+  background-color: #011C2D;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Introduction Section */
+.introduction-section {
+padding: 50px 0;
+background-color: #0E4E7E; /* Updated background color */
+color: #FFFFFF; /* Updated text color */
+}
+
+.introduction-section .container {
+text-align: left;
+}
+
+/* Meet Our Team Section */
+.section {
+padding: 50px 5px;
+background-color: #2e8ae7; /* Updated background color */
+border-radius: 15px;
+margin: 25px 10px;
+
+}
+
+.container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+
+}
+
+.team-member {
+display: flex;
+align-items: center;
+margin-bottom: 40px;
+background-color: #236aaf; /* Updated background color */
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+overflow: hidden;
+max-width: 90%;
+}
+
+.team-member img {
+width: 200px;
+height: auto;
+}
+
+.member-info {
+padding: 20px;
+}
+
+.member-info h3 {
+margin-top: 0;
+margin-bottom: 10px;
+color: #FFFFFF; /* Updated text color */
+}
+
+.member-info p {
+margin: 0;
+color: #FFFFFF; /* Updated text color */
+}
+
+.section-title {
+text-align: center;
+margin-bottom: 50px;
+color: #FFFFFF; /* Updated text color */
 }

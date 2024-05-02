@@ -51,3 +51,20 @@ document.addEventListener('DOMContentLoaded', function () {
       appendBotMessage(botResponse);
     }
 });
+let toggle = true;
+
+document.getElementById("team-container").addEventListener("click", function() {
+  const teamMembers = document.querySelectorAll(".team-member");
+  
+  teamMembers.forEach((member, index) => {
+    if (toggle && index % 2 === 0) {
+      member.style.flexDirection = "row-reverse";
+    } else if (!toggle && index % 2 !== 0) {
+      member.style.flexDirection = "row-reverse";
+    } else {
+      member.style.flexDirection = "row";
+    }
+  });
+  
+  toggle = !toggle;
+});
