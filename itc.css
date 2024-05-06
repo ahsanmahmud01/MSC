@@ -1,11 +1,4 @@
 /* Global styles */
-body {
-  background-color: #011C2D;
-  color: #FFFFFF;
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-}
 
 .container {
   max-width: 1200px;
@@ -32,15 +25,24 @@ h1, .main-body, .section-title {
 
 /* Chatbot container styles */
 /* Updated CSS for chatbot container and messages */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #011C2D;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+}
+
 .chatbot-container {
-  max-width: 400px;
-  margin: 0 auto;
+  max-width: 500px;
+  min-width: 300px;  
+  width: 100%;
   border: 1px solid #00BFFF;
   border-radius: 5px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-  margin-top: 50px;
   padding: 20px;
-  overflow-y: auto; /* Added overflow-y to enable scrolling */
+  box-sizing: border-box;
+  
 }
 
 .main-body {
@@ -74,6 +76,7 @@ h1, .main-body, .section-title {
   background-color: #00BFFF;
   color: #fff;
 }
+
 
 /* Hide toggle buttons */
 button {
@@ -163,4 +166,10 @@ color: #FFFFFF; /* Updated text color */
 text-align: center;
 margin-bottom: 50px;
 color: #FFFFFF; /* Updated text color */
+}
+.chatbot-1{
+  width: 100vw;
+  display: flex;
+justify-content: center;
+  align-items: center;
 }

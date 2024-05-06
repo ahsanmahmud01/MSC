@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #011C2D;
+      color: #FFFFFF;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .chatbot-container {
+      max-width: 400px;
+      width: 100%;
+      border: 1px solid #00BFFF;
+      border-radius: 5px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .main-body {
+      text-align: center;
+      color: #00BFFF;
+      margin-bottom: 20px;
+    }
+    .user-input {
+      width: calc(100% - 20px);
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #00BFFF;
+      color: #fff;
+      background-color: #333;
+    }
+    .user-input:focus {
+      outline: none;
+      border-color: #00FFFF;
+    }
+    .user-message, .bot-message {
+      max-width: 80%;
+      margin-bottom: 8px;
+      padding: 8px 12px;
+      border-radius: 5px;
+    }
+    .bot-message {
+      background-color: #00BFFF;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <section class="chatbot-container">
+    <div class="container">
+      <h2 class="main-body">Chat with Jarvis</h2>
+      <div id="chat-container"></div>
+      <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+    </div>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const chatContainer = document.getElementById("chat-container");
+      const userInput = document.getElementById("user-input");
+
+      userInput.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+          const userMessage = userInput.value.trim();
+          if (userMessage !== "") {
+            appendMessage("user", userMessage);
+            userInput.value = ""; // Clear input field
+
+            // Simulate bot response (replace with actual bot logic)
+            const botResponse = "Hello! I'm Jarvis. How can I assist you today?";
+            setTimeout(function() {
+              appendMessage("bot", botResponse);
+            }, 500);
+          }
+        }
+      });
+
+      function appendMessage(sender, message) {
+        const messageElement = document.createElement("div");
+        messageElement.classList.add(sender + "-message");
+        messageElement.textContent = message;
+        chatContainer.appendChild(messageElement);
+        chatContainer.scrollTop = chatContainer.scrollHeight; // Auto-scroll to bottom
+      }
+    });
+  </script>
+</body>
+</html>
