@@ -194,7 +194,7 @@ function setup() {
 	let loadedImages = 0;
 	let progress = {
 		current: 0,
-		target: 0
+		target: 100
 	};
 
 	// update progress target
